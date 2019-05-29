@@ -1,0 +1,24 @@
+{
+    "name": "archette/form-utils",
+    "description": "Form utils for nette framework",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rixafy",
+            "email": "rixafy@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Archette\\FormUtils\\": "src"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.3"
+        }
+    }
+}
