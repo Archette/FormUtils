@@ -81,6 +81,7 @@ class BootstrapRenderer extends DefaultFormRenderer
 		if ($this->controlsInit) {
 			return;
 		}
+
 		$this->controlsInit = true;
 		$this->form->getElementPrototype()->addClass('form-horizontal');
 
@@ -88,23 +89,28 @@ class BootstrapRenderer extends DefaultFormRenderer
 			$type = $control->getOption('type');
 			if (in_array($type, ['text', 'textarea', 'select'], true)) {
 				$control->getControlPrototype()->addClass('form-control');
+
 			} elseif (in_array($type, ['checkbox', 'radio'], true)) {
 				$control->getSeparatorPrototype()->setName('div')->addClass($type);
-			}
-			elseif ($control instanceof Controls\Button) {
+
+			} elseif ($control instanceof Controls\Button) {
 				$class = empty($usedPrimary) ? 'btn btn-primary btn-block' : 'btn btn-default btn-block';
 				$control->getControlPrototype()->addClass($class);
 				$usedPrimary = true;
+
 			} elseif ($control instanceof Controls\TextBase) {
 				$control->getControlPrototype()->addClass('form-control');
+
 			} elseif ($control instanceof DateInput) {
 				$control->getControlPrototype()->addClass('form-control form-control-date');
+
 			} elseif ($control instanceof Controls\SelectBox) {
 				$control->getControlPrototype()->addClass('select2');
+
 			} elseif ($control instanceof Controls\MultiSelectBox) {
 				$control->getControlPrototype()->addClass('select2');
-			}
-			elseif ($control instanceof Controls\Checkbox) {
+
+			} elseif ($control instanceof Controls\Checkbox) {
 				$control->getControlPrototype()->addClass('switch');
 				$control->getControlPart()->addClass('default');
 			}
@@ -112,8 +118,10 @@ class BootstrapRenderer extends DefaultFormRenderer
 
 		foreach ($this->form->getControls() as $control) {
 			$type = $control->getOption('type');
+
 			if (in_array($type, ['text', 'textarea', 'select'], true)) {
 				$control->getControlPrototype()->addClass('form-control');
+
 			} elseif (in_array($type, ['checkbox', 'radio'], true)) {
 				$control->getSeparatorPrototype()->setName('div')->addClass($type);
 			}
