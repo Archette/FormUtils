@@ -11,7 +11,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "nette/forms": "^3.0@dev"
+        "nette/forms": "^3.0@dev",
+        "doctrine/orm": "^2.6.3"
     },
     "autoload": {
         "psr-4": {
