@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Archette\FormUtils\Mapper;
 
 use Doctrine\ORM\PersistentCollection;
+use DateTime;
 
 class FormData
 {
@@ -22,7 +23,8 @@ class FormData
 					}
 				}
 				$this->{$key} = $array;
-
+			} elseif ($value instanceof DateTime) {
+  				$this->{$key} = $value->format('d.m.Y H:i:s');
 			} else {
 				$this->{$key} = $value;
 			}
