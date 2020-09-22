@@ -9,10 +9,12 @@
             "email": "rixafy@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
-        "nette/forms": "^3.0@dev",
-        "doctrine/orm": "^2.6.3"
+        "doctrine/orm": "2.6 - 3.0"
+    },
+    "require-dev": {
+        "nette/forms": "^3.0"
     },
     "autoload": {
         "psr-4": {
