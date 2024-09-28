@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Archette\FormUtils\Mapper;
 
+use AllowDynamicProperties;
 use Doctrine\ORM\PersistentCollection;
 use DateTime;
 
+#[AllowDynamicProperties]
 class FormData
 {
 	public function __construct(object $data)
