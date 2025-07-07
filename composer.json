@@ -10,11 +10,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {
-        "doctrine/orm": ">=2.6"
-    },
     "require-dev": {
-        "nette/forms": ">=3.0"
+        "nette/forms": ">=3.0",
+        "doctrine/orm": ">=2.6"
     },
     "autoload": {
         "psr-4": {
